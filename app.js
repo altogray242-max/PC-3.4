@@ -166,36 +166,28 @@ const countPCClicks = createClickCounter();
 // ==========================================
 // This function creates the color wave animation.
 
-// ==========================================
-// COLOR WAVE + PC IMAGE CHANGE
-// ==========================================
-
 function startColorWave(pcImage) {
 
     console.log("Starting color wave for:", pcImage.alt);
 
-    // Change the PC image
-    pcImage.src = "pc2.png";
-
-    // Add the rainbow wave animation
+    // Add the animation class to the page.
     document.body.classList.remove("color-wave");
 
-    // Restart the animation every time the PC is clicked
+    // Force the browser to restart the animation.
     void document.body.offsetWidth;
 
     document.body.classList.add("color-wave");
 
-    // Count the PC clicks
+    // Show the number of clicks.
     let currentClick = countPCClicks();
 
     console.log("PC Click Count:", currentClick);
 
-    // Remove the animation after it finishes
+    // Remove the animation class after it finishes.
     setTimeout(function() {
         document.body.classList.remove("color-wave");
     }, 1500);
 }
-
 
 
 // ==========================================
@@ -235,7 +227,7 @@ function showGPUDescription() {
     gpuName.style.color = "blue";
 
     // Show the description.
-    gpuDescription.hidden = false;
+    gpuDescription.style.display = "block";
 
     console.log("NVIDIA RTX 5070 description opened.");
 }
