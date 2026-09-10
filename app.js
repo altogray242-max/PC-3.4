@@ -195,7 +195,7 @@ function startColorWave(pcImage) {
         document.body.classList.remove("color-wave");
     }, 1500);
 }
-}
+
 
 
 // ==========================================
@@ -235,7 +235,7 @@ function showGPUDescription() {
     gpuName.style.color = "blue";
 
     // Show the description.
-    gpuDescription.style.display = "block";
+    gpuDescription.hidden = false;
 
     console.log("NVIDIA RTX 5070 description opened.");
 }
