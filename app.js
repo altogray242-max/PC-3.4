@@ -166,27 +166,35 @@ const countPCClicks = createClickCounter();
 // ==========================================
 // This function creates the color wave animation.
 
+// ==========================================
+// COLOR WAVE + PC IMAGE CHANGE
+// ==========================================
+
 function startColorWave(pcImage) {
 
     console.log("Starting color wave for:", pcImage.alt);
 
-    // Add the animation class to the page.
+    // Change the PC image
+    pcImage.src = "pc2.png";
+
+    // Add the rainbow wave animation
     document.body.classList.remove("color-wave");
 
-    // Force the browser to restart the animation.
+    // Restart the animation every time the PC is clicked
     void document.body.offsetWidth;
 
     document.body.classList.add("color-wave");
 
-    // Show the number of clicks.
+    // Count the PC clicks
     let currentClick = countPCClicks();
 
     console.log("PC Click Count:", currentClick);
 
-    // Remove the animation class after it finishes.
+    // Remove the animation after it finishes
     setTimeout(function() {
         document.body.classList.remove("color-wave");
     }, 1500);
+}
 }
 
 
