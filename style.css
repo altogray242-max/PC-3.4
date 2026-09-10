@@ -100,3 +100,29 @@ body.color-wave::before {
     }
 
 }
+/* ==========================================
+   NVIDIA RTX 5070 DESCRIPTION
+   ========================================== */
+
+#gpuName {
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#gpuName:hover {
+    text-decoration: underline;
+}
+
+.gpu-description {
+    display: none;
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 20px;
+    background: #222222;
+    border-radius: 10px;
+}
+
+.gpu-description h3 {
+    margin-top: 0;
+}
