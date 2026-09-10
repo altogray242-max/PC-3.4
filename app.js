@@ -212,3 +212,34 @@ pcImage.addEventListener("click", function() {
     startColorWave(this);
 
 });
+// ==========================================
+// NVIDIA RTX 5070 DESCRIPTION FUNCTION
+// ==========================================
+// This function shows or hides information
+// about the graphics card.
+
+function showGPUDescription() {
+
+    const gpuName = document.getElementById("gpuName");
+    const gpuDescription = document.getElementById("gpuDescription");
+
+    // Change the GPU text to blue.
+    gpuName.style.color = "blue";
+
+    // Show the description.
+    gpuDescription.style.display = "block";
+
+    console.log("NVIDIA RTX 5070 description opened.");
+}
+
+
+// ==========================================
+// GPU EVENT
+// ==========================================
+// Find the NVIDIA RTX 5070 text.
+
+const gpuName = document.getElementById("gpuName");
+
+// When the text is clicked, run the function.
+
+gpuName.addEventListener("click", showGPUDescription);
