@@ -243,3 +243,68 @@ const gpuName = document.getElementById("gpuName");
 // When the text is clicked, run the function.
 
 gpuName.addEventListener("click", showGPUDescription);
+// ==========================================
+// CONCATENATED STRING VARIABLE
+// ==========================================
+
+let pcSummary = "The " + pcBuild.name +
+    " has an " + pcBuild.processor +
+    " processor, an " + pcBuild.graphicsCard +
+    " graphics card, and " + pcBuild.memory +
+    " of RAM.";
+
+console.log(pcSummary);
+
+
+// ==========================================
+// IF CONDITIONAL STATEMENT
+// ==========================================
+
+if (pcBuild.price >= 1500) {
+    console.log("This PC is powerful... and your wallet knows it.");
+} else {
+    console.log("Nice! Your wallet survived the PC build.");
+}
+
+
+// ==========================================
+// SWITCH STATEMENT
+// ==========================================
+
+let pcType = "Gaming";
+
+switch (pcType) {
+
+    case "Gaming":
+        console.log("Gaming PC selected. Time to play!");
+        break;
+
+    case "Work":
+        console.log("Work PC selected. Time to be productive.");
+        break;
+
+    case "Creator":
+        console.log("Creator PC selected. Time to make something awesome.");
+        break;
+
+    default:
+        console.log("PC type not recognized.");
+}
+
+
+// ==========================================
+// STRING METHOD
+// ==========================================
+
+let gpuUppercase = pcBuild.graphicsCard.toUpperCase();
+
+console.log("Graphics Card:", gpuUppercase);
+
+
+// ==========================================
+// NUMBER METHOD
+// ==========================================
+
+let formattedPrice = pcBuild.price.toFixed(2);
+
+console.log("PC Price: $" + formattedPrice);
