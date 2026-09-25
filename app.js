@@ -309,9 +309,8 @@ let formattedPrice = pcBuild.price.toFixed(2);
 
 console.log("PC Price: $" + formattedPrice);
 // ==========================================
-// FOR LOOP
+// FOR LOOP - DISPLAY COMPONENTS
 // ==========================================
-// The for loop goes through each PC component.
 
 let components = [
     "AMD Ryzen 7",
@@ -320,34 +319,42 @@ let components = [
     "1TB SSD"
 ];
 
+const componentList = document.getElementById("componentList");
+
 for (let i = 0; i < components.length; i++) {
 
-    console.log(
+    let component = document.createElement("p");
+
+    component.textContent =
         "Component " +
         (i + 1) +
         ": " +
-        components[i]
-    );
+        components[i];
 
+    componentList.appendChild(component);
 }
 
 
 // ==========================================
-// WHILE LOOP
+// WHILE LOOP - DISPLAY COMPONENT DETAILS
 // ==========================================
-// The while loop also goes through each component.
 
 let componentNumber = 0;
 
+const componentDetails =
+    document.getElementById("componentDetails");
+
 while (componentNumber < components.length) {
 
-    console.log(
-        "While Loop Component " +
+    let detail = document.createElement("p");
+
+    detail.textContent =
+        "Part " +
         (componentNumber + 1) +
-        ": " +
-        components[componentNumber]
-    );
+        " is: " +
+        components[componentNumber];
+
+    componentDetails.appendChild(detail);
 
     componentNumber++;
-
 }
