@@ -308,3 +308,46 @@ console.log("Graphics Card:", gpuUppercase);
 let formattedPrice = pcBuild.price.toFixed(2);
 
 console.log("PC Price: $" + formattedPrice);
+// ==========================================
+// FOR LOOP
+// ==========================================
+// The for loop goes through each PC component.
+
+let components = [
+    "AMD Ryzen 7",
+    "NVIDIA RTX 5070",
+    "32GB DDR5",
+    "1TB SSD"
+];
+
+for (let i = 0; i < components.length; i++) {
+
+    console.log(
+        "Component " +
+        (i + 1) +
+        ": " +
+        components[i]
+    );
+
+}
+
+
+// ==========================================
+// WHILE LOOP
+// ==========================================
+// The while loop also goes through each component.
+
+let componentNumber = 0;
+
+while (componentNumber < components.length) {
+
+    console.log(
+        "While Loop Component " +
+        (componentNumber + 1) +
+        ": " +
+        components[componentNumber]
+    );
+
+    componentNumber++;
+
+}
